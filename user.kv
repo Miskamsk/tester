@@ -1,0 +1,56 @@
+#:kivy 1.11.1
+
+<LoginScreen>:  
+    orientation: 'vertical'
+    email: email_input.text
+    label: label
+
+
+    canvas:
+            
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            
+
+    Label:
+        text: 'Ваш пинг:'
+        font_size: 44
+        height: 40
+        width: root.width * 5 / 7
+        center_x: root.width / 2.3
+        top: root.top - 140
+        color: 0,0,0,1
+
+
+    Label:
+        id: label
+        text: ''
+        font_size: 44
+        height: 40
+        width: root.width * 5 / 7
+        center_x: root.width / 1.5
+        top: root.top - 140
+        color: 0,0,0,1
+    
+
+    TextInput:
+        id: email_input
+        font_size: 24
+        height: 40
+        width: root.width * 5 / 7
+        center_x: root.width / 2
+        top: root.top - 230
+        multiline: False
+    
+    
+    Button:
+        font_size: 20
+        height: 60
+        width: 360
+        center_x: root.width / 2
+        top: root.top - 380
+        text: "Проверить"
+        on_press: root.login()
+            
+    
